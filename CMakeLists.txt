@@ -15,4 +15,6 @@ add_executable(DaPong
         Render/render.c
         Render/render.h
         Input/Input.c
-        Input/Input.h)
+        Input/Input.h
+        Game/Game.c
+        Game/Game.h)
