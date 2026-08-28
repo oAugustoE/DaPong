@@ -2,9 +2,10 @@
 #include <unistd.h>
 
 #include "../config/config.h"
+#include "../Ai/Ai.h"
 #include "player.h"
 
-void player_logic(Player *player, Player *Player2) {
+void player_logic(Player *player, Player *Player2, int p_type) {
     unsigned char ch;
 
     while (read(STDIN_FILENO, &ch, 1) > 0) {
@@ -18,18 +19,20 @@ void player_logic(Player *player, Player *Player2) {
                 player->y += player->speed;
             }
         }
-        else if (ch == 'i') {
-            if (Player2->y > 1) {
-                Player2->y -= Player2->speed;
+        if (p_type == 1) {
+            if (ch == 'i') {
+                if (Player2->y > 1) {
+                    Player2->y -= Player2->speed;
+                }
             }
-        }
-        else if (ch == 'k') {
-            if (Player2->y + Player2->length < CANVAS_HEIGHT - 1) {
-                Player2->y += Player2->speed;
+            else if (ch == 'k') {
+                if (Player2->y + Player2->length < CANVAS_HEIGHT - 1) {
+                    Player2->y += Player2->speed;
+                }
             }
-        }
-        else if (ch == 'q') {
-            exit(0);
+            else if (ch == 'q') {
+                exit(0);
+            }
         }
     }
 }

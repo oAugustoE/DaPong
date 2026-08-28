@@ -8,10 +8,10 @@
 #include "../Player/player.h"
 
 typedef struct {
-    int x;
-    int y;
-    int dx;
-    int dy;
+    double x;
+    double y;
+    double dx;
+    double dy;
 } Ball;
 
 void gen_ball(Ball *ball);

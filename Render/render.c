@@ -125,7 +125,7 @@ int render_menu() {
 void render_canvas(const Canvas *Window,const Ball *Ball, const Player *player, const Player *player2) {
     for (int y = 0; y < Window->height; y++) {
         for (int x = 0; x < Window->width; x++) {
-            if (Ball->x == x && Ball->y == y) {
+            if ((int)Ball->x == x && (int)Ball->y == y) {
                 printf("*");
             }
             else if (y == 0 || y == Window->height - 1) {

@@ -17,4 +17,6 @@ add_executable(DaPong
         Input/Input.c
         Input/Input.h
         Game/Game.c
-        Game/Game.h)
+        Game/Game.h
+        Ai/Ai.c
+        Ai/Ai.h)

@@ -13,7 +13,7 @@ typedef struct {
     char type;
 } Player;
 
-void player_logic(Player *player, Player *Player2);
+void player_logic(Player *player, Player *Player2, int p_type);
 void gen_player(Player *Player, char type);
 
 #endif //DAPONG_PLAYER_LOGIC_H

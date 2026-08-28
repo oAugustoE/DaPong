@@ -1,12 +1,10 @@
 #include "Render/render.h"
 #include "Game/Game.h"
-#include <stdio.h>
 
 
 int main(void) {
 
-    render_menu();
-    int winner = Game();
+    int winner = Game(render_menu());
     render_winner(winner);
 
     return 0;
