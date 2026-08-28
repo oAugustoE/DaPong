@@ -10,5 +10,6 @@
 
 void render_canvas(const Canvas *canvas,const Ball *ball, const Player *player, const Player *player2);
 void render_winner(int winner);
+int render_menu();
 
 #endif
